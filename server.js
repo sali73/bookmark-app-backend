@@ -6,6 +6,9 @@ const booksController = require('./controllers/books.js');
 const db = mongoose.connection
 const MONGODB_URI =process.env.MONGODB_URL || 'mongodb://localhost:27017/books';
 const cors = require('cors');
+// app.js or server.js
+require('dotenv').config()
+// REST OF YOUR CODE
 
 // CORS
 // Whitelist, API will accept calls from this address
