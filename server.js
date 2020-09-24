@@ -24,9 +24,12 @@ const corsOptions = {
    },
 };
 
+
+
  ////////////////////////
 //db connection
 //////////////////////
+
 
 mongoose.connect(MONGODB_URI, {
    useNewUrlParser: true,
