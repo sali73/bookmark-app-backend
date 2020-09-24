@@ -2,6 +2,7 @@ const express = require ('express')
 const app = express()
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3001
+const Books = require('./models/tour.js');
 const booksController = require('./controllers/books.js');
 const db = mongoose.connection
 const MONGODB_URI =process.env.MONGODB_URL || 'mongodb://localhost:27017/books';
@@ -44,7 +45,7 @@ db.on('open', () => {
 ////////////////////
 app.use(cors()); // Adding cors to allow API to be called
 app.use(express.json())
-app.use('/books/', booksController);
+app.use('/books', booksController);
 // app.get('/' , (req,res)=>{
 //     res.send('hello')
 // })
