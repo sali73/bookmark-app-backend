@@ -2,7 +2,7 @@ const express = require ('express')
 const app = express()
 const mongoose = require('mongoose');
 const PORT = process.env.PORT || 3001
-const Books = require('./models/tour.js');
+
 const booksController = require('./controllers/books.js');
 const db = mongoose.connection
 const MONGODB_URI =process.env.MONGODB_URL || 'mongodb://localhost:27017/books';
@@ -13,7 +13,7 @@ require('dotenv').config()
 
 // CORS
 // Whitelist, API will accept calls from this address
-const whitelist = ['http://localhost:3000'];
+const whitelist = ['http://localhost:3001'];
 
 const corsOptions = {
    origin: function (origin, callback) {
